@@ -6,6 +6,6 @@ docker run -it --rm \
        -e DISPLAY=$DISPLAY \
        -e QT_X11_NO_MITSHM=1 \
        -v /tmp/.X11-unix:/tmp/.X11-unix:rw \
-       iory/linemod \
-       /bin/bash
+       iory/docker-linemode:indigo \
+       /bin/bash -i -c 'rosrun jsk_perception linemod'
 xhost -local:
